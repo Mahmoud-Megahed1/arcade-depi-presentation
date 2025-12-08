@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCADE - Online Electronics Store Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles-depi.css">
+</head>
+
+<body>
+    <!-- Geometric Pattern Background -->
+    <div class="geometric-pattern"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-controls">
+        <button class="nav-btn" id="prevBtn" onclick="prevSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <span class="slide-counter" id="slideCounter">1 / 13</span>
+        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </nav>
+
+    <!-- Presentation Container -->
+    <div class="presentation" id="presentation">
+
+        <!-- ======================= SLIDE 1: Title ======================= -->
+        <section class="slide active" id="slide1">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content title-slide">
+                <h1 class="main-title">ARCADE</h1>
+                <h2 class="subtitle">Online Electronics Store<br>E-commerce Platform</h2>
+                <div class="team-section">
+                    <h3>Team Members</h3>
+                    <div class="team-grid">
+                        <span class="team-member">El Hassan Mohammed Taha</span>
+                        <span class="team-member">Mahmoud Mohammed Megahed</span>
+                        <span class="team-member">Osama Hamdy El Ganterey</span>
+                        <span class="team-member">Ahmed Mohamed Abokhyal</span>
+                        <span class="team-member">Raheem Darweesh Ragab</span>
+                        <span class="team-member">Kareem Ahmed El Sandarosy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">1</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 2: Problem Statement ======================= -->
+        <section class="slide" id="slide2">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Problem Statement</h2>
+                <ul class="content-list">
+                    <li>Traditional electronics shopping is limited by physical store locations and operating hours,
+                        creating inconvenience for customers.</li>
+                    <li>Customers lack convenient online options to browse, compare, and purchase electronic products
+                        from the comfort of their homes.</li>
+                    <li>Retailers need efficient systems to manage inventory, track orders, and maintain product
+                        catalogs without manual overhead.</li>
+                    <li>This gap creates inefficiencies, reduces accessibility, and hinders the overall shopping
+                        experience for all stakeholders.</li>
+                </ul>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">2</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 3: Project Scope ======================= -->
+        <section class="slide" id="slide3">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Project Scope (MVP)</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-user-shield"></i> User Management</h4>
+                        <ul>
+                            <li>Registration with email/password</li>
+                            <li>Secure login/logout with JWT tokens</li>
+                            <li>Profile management & updates</li>
+                            <li>Role-based access (Customer/Admin)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-store"></i> Product Catalog</h4>
+                        <ul>
+                            <li>Browse products by categories</li>
+                            <li>Search by product name</li>
+                            <li>Price range filtering</li>
+                            <li>Stock status filtering</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-shopping-cart"></i> Shopping Cart</h4>
+                        <ul>
+                            <li>Add/remove items with validation</li>
+                            <li>Quantity modification</li>
+                            <li>Persistent cart storage</li>
+                            <li>Real-time total calculation</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-cogs"></i> Admin Panel</h4>
+                        <ul>
+                            <li>Product CRUD operations</li>
+                            <li>Inventory monitoring dashboard</li>
+                            <li>Order management</li>
+                            <li>Stock level tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">3</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 4: User Story - Customer ======================= -->
+        <section class="slide" id="slide4">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">User Story : Customer</h2>
+                <div class="user-story-section">
+                    <div class="user-story-item">
+                        <h4>1 - Browse & Search Products</h4>
+                        <p><strong>As a Customer</strong>, I want to browse and search for electronics products
+                            <strong>so that</strong> I can find items that match my needs and budget.</p>
+                    </div>
+                    <div class="user-story-item">
+                        <h4>2 - Manage Shopping Cart</h4>
+                        <p><strong>As a Customer</strong>, I want to add products to my cart and modify quantities
+                            <strong>so that</strong> I can prepare my order before checkout.</p>
+                    </div>
+                    <div class="user-story-item">
+                        <h4>3 - Complete Checkout</h4>
+                        <p><strong>As a Customer</strong>, I want to enter my delivery address and confirm my order
+                            <strong>so that</strong> I receive my products at the correct location.</p>
+                    </div>
+                    <div class="user-story-item">
+                        <h4>4 - View Order History</h4>
+                        <p><strong>As a Customer</strong>, I want to view my past orders and their status <strong>so
+                                that</strong> I can track my purchases.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">4</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 5: User Story - Admin ======================= -->
+        <section class="slide" id="slide5">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">User Story : Administrator</h2>
+                <div class="user-story-section">
+                    <div class="user-story-item">
+                        <h4>1 - Manage Products</h4>
+                        <p><strong>As an Admin</strong>, I want to add, edit, and delete products <strong>so
+                                that</strong> customers can see accurate and up-to-date product information.</p>
+                    </div>
+                    <div class="user-story-item">
+                        <h4>2 - Monitor Inventory</h4>
+                        <p><strong>As an Admin</strong>, I want to monitor stock levels <strong>so that</strong> I can
+                            maintain adequate inventory for customer orders.</p>
+                    </div>
+                    <div class="user-story-item">
+                        <h4>3 - View All Orders</h4>
+                        <p><strong>As an Admin</strong>, I want to view all customer orders <strong>so that</strong> I
+                            can track sales and manage fulfillment.</p>
+                    </div>
+                    <div class="user-story-item">
+                        <h4>4 - Update Order Status</h4>
+                        <p><strong>As an Admin</strong>, I want to update order status from Pending to Completed
+                            <strong>so that</strong> customers can track their order progress.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">5</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 6: Technology Stack ======================= -->
+        <section class="slide" id="slide6">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Technology Stack</h2>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="card">
+                            <h3><i class="fas fa-server"></i> Backend Stack</h3>
+                            <ul>
+                                <li><strong>ASP.NET Core 9.0</strong> - MVC Architecture</li>
+                                <li><strong>Entity Framework Core</strong> - Code-First approach</li>
+                                <li><strong>Microsoft SQL Server 2022</strong> - Database</li>
+                                <li><strong>JWT Tokens</strong> - Session management (24h)</li>
+                                <li><strong>BCrypt</strong> - Password hashing with salt</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <h3><i class="fas fa-palette"></i> Frontend Stack</h3>
+                            <ul>
+                                <li><strong>Razor Templates</strong> - Server-side rendering</li>
+                                <li><strong>Bootstrap 5</strong> - Responsive design</li>
+                                <li><strong>jQuery</strong> - Client-side interactions</li>
+                                <li><strong>DataTables</strong> - Product listings</li>
+                                <li><strong>Font Awesome</strong> - Icon library</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">6</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 7: Database Design ======================= -->
+        <section class="slide" id="slide7">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Database Design</h2>
+                <p class="database-subtitle">Relational database using Microsoft SQL Server, managed via Entity
+                    Framework Core.</p>
+                <div class="database-section">
+                    <h4 style="margin-bottom: 15px; color: #333;">Key Entities</h4>
+                    <ul class="entity-list">
+                        <li><strong>User:</strong> Stores email, password hash, full name, role (Customer/Admin), and
+                            active status. Linked to CartItems and Orders.</li>
+                        <li><strong>Category:</strong> Contains category name. Linked to Products (one-to-many).</li>
+                        <li><strong>Product:</strong> Stores name, price, stock quantity, description, and image URL.
+                            Linked to Category, CartItems, and OrderDetails.</li>
+                        <li><strong>CartItem:</strong> Links User to Product with quantity. Enables persistent shopping
+                            cart.</li>
+                        <li><strong>Order:</strong> Stores order date, total amount, status (Pending/Completed), and
+                            delivery address. Linked to User and OrderDetails.</li>
+                        <li><strong>OrderDetail:</strong> Junction table linking Order to Product with quantity and unit
+                            price.</li>
+                    </ul>
+                    <div class="data-flow">
+                        <strong>Data Flow:</strong> Data collected via user inputs on <strong>Razor Pages</strong>;
+                        stored in <strong>SQL Server</strong> using <strong>EF Core</strong>; accessed through
+                        <strong>Repository Pattern</strong> ensuring clean architecture.
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">7</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 8: ER Diagram ======================= -->
+        <section class="slide" id="slide8">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">ER Diagram</h2>
+                <div class="diagram-container">
+                    <img src="erd-diagram.png" alt="Entity Relationship Diagram">
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">8</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 9: MVC Architecture ======================= -->
+        <section class="slide" id="slide9">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">MVC Architecture</h2>
+                <div class="architecture-view">
+                    <div class="layers-diagram">
+                        <div class="layer">
+                            <span class="layer-icon"><i class="fas fa-eye"></i></span>
+                            <span class="layer-name">Views (Razor)</span>
+                            <span class="layer-desc">User Interface - Registration, Login, Product Catalog, Cart,
+                                Checkout, Admin Panel</span>
+                        </div>
+                        <div class="layer-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="layer">
+                            <span class="layer-icon"><i class="fas fa-traffic-light"></i></span>
+                            <span class="layer-name">Controllers</span>
+                            <span class="layer-desc">Home, Account, Product, Cart, Order, AdminProduct</span>
+                        </div>
+                        <div class="layer-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="layer">
+                            <span class="layer-icon"><i class="fas fa-cog"></i></span>
+                            <span class="layer-name">Services</span>
+                            <span class="layer-desc">Authentication, Product, Cart, Order - Business Logic</span>
+                        </div>
+                        <div class="layer-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="layer">
+                            <span class="layer-icon"><i class="fas fa-archive"></i></span>
+                            <span class="layer-name">Repositories</span>
+                            <span class="layer-desc">Data Access Abstraction - Generic IRepository Pattern</span>
+                        </div>
+                        <div class="layer-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="layer">
+                            <span class="layer-icon"><i class="fas fa-database"></i></span>
+                            <span class="layer-name">SQL Server 2022</span>
+                            <span class="layer-desc">Data Persistence - Entity Framework Core</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">9</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 10: Security ======================= -->
+        <section class="slide" id="slide10">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Security & Data Protection</h2>
+                <div class="security-grid">
+                    <div class="security-card">
+                        <h4><i class="fas fa-key"></i> Authentication</h4>
+                        <ul>
+                            <li>BCrypt hashing with salt for passwords</li>
+                            <li>JWT tokens with 24-hour expiration</li>
+                            <li>Role-based access control (Customer/Admin)</li>
+                            <li>Session timeout after inactivity</li>
+                        </ul>
+                    </div>
+                    <div class="security-card">
+                        <h4><i class="fas fa-lock"></i> Data Protection</h4>
+                        <ul>
+                            <li>HTTPS/TLS encryption for all traffic</li>
+                            <li>Encrypted connection strings</li>
+                            <li>No credit card storage (simulated checkout)</li>
+                            <li>Minimal personal data collection</li>
+                        </ul>
+                    </div>
+                    <div class="security-card">
+                        <h4><i class="fas fa-bug"></i> Injection Prevention</h4>
+                        <ul>
+                            <li>Entity Framework parameterized queries</li>
+                            <li>Server-side input validation</li>
+                            <li>HTML encoding for XSS prevention</li>
+                            <li>Email format validation (RFC 5322)</li>
+                        </ul>
+                    </div>
+                    <div class="security-card">
+                        <h4><i class="fas fa-user-check"></i> Access Control</h4>
+                        <ul>
+                            <li>Anti-CSRF tokens on all forms</li>
+                            <li>Admin-only protected controllers</li>
+                            <li>User-specific data access only</li>
+                            <li>ASP.NET Core auth middleware</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">10</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 11: Stakeholders ======================= -->
+        <section class="slide" id="slide11">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Stakeholders & Risk Assessment</h2>
+                <div class="stakeholder-layout">
+                    <div class="stakeholder-matrix">
+                        <h4>Power/Interest Matrix</h4>
+                        <div class="matrix-grid">
+                            <div class="matrix-cell manage-closely">
+                                <strong>Manage Closely</strong>
+                                <span>Dev Team, Executives, DB Admin</span>
+                            </div>
+                            <div class="matrix-cell keep-satisfied">
+                                <strong>Keep Satisfied</strong>
+                                <span>IT Infrastructure</span>
+                            </div>
+                            <div class="matrix-cell keep-informed">
+                                <strong>Keep Informed</strong>
+                                <span>QA Team, Business Analysts</span>
+                            </div>
+                            <div class="matrix-cell monitor">
+                                <strong>Monitor</strong>
+                                <span>End Users</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="risk-table">
+                        <h4>Key Risks</h4>
+                        <table>
+                            <tr>
+                                <th>Risk</th>
+                                <th>Impact</th>
+                                <th>Mitigation</th>
+                            </tr>
+                            <tr>
+                                <td>Scope Creep</td>
+                                <td>High</td>
+                                <td>Change control process</td>
+                            </tr>
+                            <tr>
+                                <td>Team Burnout</td>
+                                <td>Critical</td>
+                                <td>Workload management</td>
+                            </tr>
+                            <tr>
+                                <td>Timeline Pressure</td>
+                                <td>Medium</td>
+                                <td>Realistic planning</td>
+                            </tr>
+                            <tr>
+                                <td>User Adoption</td>
+                                <td>High</td>
+                                <td>Training & good UX</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">11</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 12: Out of Scope ======================= -->
+        <section class="slide" id="slide12">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content">
+                <h2 class="slide-title">Out of Scope (Not in MVP)</h2>
+                <div class="out-of-scope-grid">
+                    <div class="oos-card">
+                        <h4><i class="fas fa-credit-card"></i> Payment & Notifications</h4>
+                        <ul>
+                            <li>❌ Real payment gateway (Stripe, PayPal)</li>
+                            <li>❌ Email order confirmations</li>
+                            <li>❌ SMS/Push notifications</li>
+                        </ul>
+                    </div>
+                    <div class="oos-card">
+                        <h4><i class="fas fa-star"></i> Advanced Features</h4>
+                        <ul>
+                            <li>❌ Product reviews & ratings</li>
+                            <li>❌ Advanced filtering (brand, warranty)</li>
+                            <li>❌ Wishlist functionality</li>
+                        </ul>
+                    </div>
+                    <div class="oos-card">
+                        <h4><i class="fas fa-chart-line"></i> Business Intelligence</h4>
+                        <ul>
+                            <li>❌ Analytics dashboards</li>
+                            <li>❌ Sales reporting</li>
+                            <li>❌ Customer behavior tracking</li>
+                        </ul>
+                    </div>
+                    <div class="oos-card">
+                        <h4><i class="fas fa-mobile-alt"></i> Platform</h4>
+                        <ul>
+                            <li>❌ Mobile application</li>
+                            <li>❌ Multi-language support</li>
+                            <li>❌ Product recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">12</div>
+            </div>
+        </section>
+
+        <!-- ======================= SLIDE 13: Thank You ======================= -->
+        <section class="slide" id="slide13">
+            <div class="slide-top-border"></div>
+            <div class="header-logos">
+                <div class="logo-left">
+                    <img src="https://i.imgur.com/vQnRWKj.png" alt="رواد مصر الرقمية">
+                </div>
+                <div class="logo-right">
+                    <img src="https://i.imgur.com/Z8Z8Z8Z.png" alt="وزارة الاتصالات">
+                </div>
+            </div>
+            <div class="slide-content thank-you-slide">
+                <div class="questions-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="thank-you-text">
+                    <h1>Thank You!</h1>
+                    <p>Questions?</p>
+                </div>
+                <div style="margin-top: 50px; color: #666;">
+                    <p>Online Electronics Store – E-commerce Platform</p>
+                    <p style="color: #999; margin-top: 10px;">December 2025</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="date-box">December 2025</div>
+                <div class="footer-logo">
+                    <img src="https://i.imgur.com/iLearnLogo.png" alt="I LEARN Academy">
+                </div>
+                <div class="slide-number">13</div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="slide-indicators" id="slideIndicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+        <span class="indicator" onclick="goToSlide(2)"></span>
+        <span class="indicator" onclick="goToSlide(3)"></span>
+        <span class="indicator" onclick="goToSlide(4)"></span>
+        <span class="indicator" onclick="goToSlide(5)"></span>
+        <span class="indicator" onclick="goToSlide(6)"></span>
+        <span class="indicator" onclick="goToSlide(7)"></span>
+        <span class="indicator" onclick="goToSlide(8)"></span>
+        <span class="indicator" onclick="goToSlide(9)"></span>
+        <span class="indicator" onclick="goToSlide(10)"></span>
+        <span class="indicator" onclick="goToSlide(11)"></span>
+        <span class="indicator" onclick="goToSlide(12)"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
