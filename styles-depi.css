@@ -53,26 +53,14 @@ body {
     opacity: 0.8;
 }
 
-/* Top Green Border */
+/* Top Green Border - HIDDEN */
 .slide-top-border {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: var(--accent-green);
+    display: none;
 }
 
-/* Header Logos */
+/* Header Logos - HIDDEN */
 .header-logos {
-    position: absolute;
-    top: 15px;
-    left: 30px;
-    right: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 100;
+    display: none;
 }
 
 .logo-left,
@@ -88,17 +76,9 @@ body {
     max-height: 70px;
 }
 
-/* Footer */
+/* Footer - HIDDEN */
 .slide-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
+    display: none;
 }
 
 .date-box {
@@ -131,15 +111,9 @@ body {
     font-weight: 700;
 }
 
-/* Progress Bar */
+/* Progress Bar - HIDDEN */
 .progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #e5e5e5;
-    z-index: 1000;
+    display: none;
 }
 
 .progress-fill {
@@ -152,24 +126,24 @@ body {
 /* Navigation Controls */
 .nav-controls {
     position: fixed;
-    bottom: 80px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     z-index: 100;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 12px 24px;
-    border-radius: 50px;
-    border: 2px solid var(--accent-green);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-btn {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: none;
     background: var(--accent-green);
@@ -178,7 +152,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 12px;
     transition: all 0.3s ease;
 }
 
@@ -194,10 +168,10 @@ body {
 }
 
 .slide-counter {
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--text-secondary);
-    min-width: 60px;
+    min-width: 40px;
     text-align: center;
 }
 
@@ -250,7 +224,7 @@ body {
     display: none;
     opacity: 0;
     overflow: hidden;
-    padding: 85px 60px 70px;
+    padding: 10px 30px 45px;
     background: var(--bg-primary);
 }
 
@@ -272,7 +246,6 @@ body {
 .slide-content {
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%;
 }
 
 /* Title Slide Styles */
@@ -280,28 +253,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    padding-top: 30px;
 }
 
 .main-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 800;
     font-style: italic;
     color: var(--accent-green);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 /* Team Members Badge Style */
 .team-section {
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .team-section h3 {
@@ -338,10 +312,10 @@ body {
 
 /* Slide Titles */
 .slide-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--text-primary);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -354,8 +328,8 @@ body {
 }
 
 .content-list li {
-    padding: 12px 0;
-    padding-left: 30px;
+    padding: 10px 0;
+    padding-left: 25px;
     position: relative;
     color: var(--text-secondary);
     line-height: 1.5;
@@ -383,21 +357,21 @@ body {
 }
 
 .user-story-item {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .user-story-item h4 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .user-story-item p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.4;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .user-story-item strong {
@@ -423,12 +397,12 @@ body {
 }
 
 .entity-list li {
-    padding: 6px 0;
+    padding: 8px 0;
     padding-left: 25px;
     position: relative;
     color: var(--text-secondary);
-    line-height: 1.4;
-    font-size: 13px;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
 .entity-list li::before {
@@ -672,25 +646,31 @@ body {
 
 /* Architecture Diagram */
 .architecture-view {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .layers-diagram {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .layer {
     background: var(--bg-secondary);
     border: 2px solid var(--accent-green);
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
     transition: all 0.3s ease;
+    width: 180px;
+    text-align: center;
 }
 
 .layer:hover {
@@ -698,33 +678,31 @@ body {
 }
 
 .layer-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: var(--accent-green);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .layer-name {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 13px;
     color: var(--text-primary);
-    min-width: 150px;
 }
 
 .layer-desc {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 11px;
+    line-height: 1.3;
 }
 
 .layer-arrow {
-    text-align: center;
-    color: var(--accent-green);
-    font-size: 20px;
+    display: none;
 }
 
 /* Use Cases Grid */
